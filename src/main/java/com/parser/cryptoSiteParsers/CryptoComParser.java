@@ -14,12 +14,17 @@ import java.util.Objects;
  *  Данный класс парсит страницу <a href="https://crypto.com/price">crypto.com/price</a>
  *  Создает и хранит объекты Cryptocurrency
  */
-@Getter
 public class CryptoComParser implements CryptoSiteParser {
+    private final List<Cryptocurrency> cryptocurrencyList = new ArrayList<>();
     private final String link = "https://crypto.com/price";
     private final String siteName = "crypto.com";
+    private final int waitSeconds;
 
-    private List<Cryptocurrency> cryptocurrencyList = new ArrayList<>();
+    public CryptoComParser(int waitSeconds) {
+        this.waitSeconds = waitSeconds;
+    }
+
+
 
     /**
      * Метод с помощью библиотеки Jsoup создает соединение с сайтом,
@@ -37,14 +42,32 @@ public class CryptoComParser implements CryptoSiteParser {
                     .map(e -> e.getElementsByTag("p"))
                     .filter(e -> !e.isEmpty())
                     .forEach(e ->
-                cryptocurrencyList.add(
-                        new Cryptocurrency(e.get(0).text(), e.get(1).text(), siteName)
-                )
-            );
+                            cryptocurrencyList.add(
+                                    new Cryptocurrency(
+                                            e.get(0).text(),
+                                            e.get(1).text().replace(",",""),
+                                            siteName)
+                            )
+                    );
         } catch (IOException e) {
             throw new RuntimeException("Соединение не удалось " + link, e);
         } catch (NullPointerException e) {
             throw new RuntimeException("tbody = null " + link, e);
         }
+    }
+
+    @Override
+    public int getWaitSeconds() {
+        return waitSeconds;
+    }
+
+    @Override
+    public String getSiteName() {
+        return siteName;
+    }
+
+    @Override
+    public List<Cryptocurrency> getCryptocurrencyList() {
+        return List.copyOf(cryptocurrencyList);
     }
 }

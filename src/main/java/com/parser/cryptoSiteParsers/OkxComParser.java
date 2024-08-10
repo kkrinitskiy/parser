@@ -1,10 +1,9 @@
 package com.parser.cryptoSiteParsers;
 
+import com.parser.TextFileStorage;
 import com.parser.dto.Cryptocurrency;
-import lombok.Getter;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,18 +11,19 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- *  Данный класс парсит страницу <a href="https://coinmarketcap.com/">coinmarketcap.com</a>
+ *  Данный класс парсит страницу <a href="https://www.okx.com/ru/markets/prices">okx.com</a>
  *  Создает и хранит объекты Cryptocurrency
  */
-public class CoinMarketCapComParser implements CryptoSiteParser {
+public class OkxComParser implements CryptoSiteParser {
     private final List<Cryptocurrency> cryptocurrencyList = new ArrayList<>();
-    private final String link = "https://coinmarketcap.com/";
-    private final String siteName = "coinmarketcap.com";
+    private final String link = "https://www.okx.com/ru/markets/prices";
+    private final String siteName = "okx.com";
     private final int waitSeconds;
 
-    public CoinMarketCapComParser(int waitSeconds) {
+    public OkxComParser(int waitSeconds) {
         this.waitSeconds = waitSeconds;
     }
+
 
     /**
      * Метод с помощью библиотеки Jsoup создает соединение с сайтом,
@@ -32,27 +32,26 @@ public class CoinMarketCapComParser implements CryptoSiteParser {
      * отсеивает пустые и создает из полученных данных объекты
      * Cryptocurrency
      */
+    @Override
     public void getCryptocurrency() {
         try {
-            Document doc = Jsoup.connect(link).get();
+            Document doc = Jsoup.connect(link)
+                    .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+                    .get();
             Objects.requireNonNull(doc.select("tbody").first())
                     .children()
                     .stream()
-                    .map(e -> {
-                        Elements children = e.children();
-                        Elements p = children.get(2).select("p.sc-71024e3e-0.ehyBa-d");
-                        p.addAll(children.get(3).select("span:not([class])"));
-                        return p;
-                    })
-                    .filter(e -> !e.isEmpty())
-                    .forEach(e ->
+                    .forEach(
+                        e ->{
                             cryptocurrencyList.add(
                                     new Cryptocurrency(
-                                            e.get(0).text(),
-                                            e.get(1).text().replace(",",""),
+                                            e.select("span.full-name").first().text(),
+                                            e.select("td.last-price").first().text()
+                                                    .replace(",",".")
+                                                    .replace(" ",""),
                                             siteName)
-                            )
-                    );
+                            );
+                    });
         } catch (IOException e) {
             throw new RuntimeException("Соединение не удалось " + link, e);
         } catch (NullPointerException e) {
@@ -74,4 +73,6 @@ public class CoinMarketCapComParser implements CryptoSiteParser {
     public List<Cryptocurrency> getCryptocurrencyList() {
         return List.copyOf(cryptocurrencyList);
     }
+
+
 }
