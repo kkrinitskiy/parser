@@ -1,50 +1,50 @@
-Bitcoin - $60653.82
-Ethereum - $2617.71
+Bitcoin - $60614.60
+Ethereum - $2619.11
 Tether - $1.00
-BNB - $515.00
-Solana - $153.64
+BNB - $514.50
+Solana - $153.46
 USD Coin - $1.00
-XRP - $0.5993
-Toncoin - $6.71
-Dogecoin - $0.1038
-Cardano - $0.3463
+XRP - $0.5968
+Toncoin - $6.69
+Dogecoin - $0.1039
+Cardano - $0.3458
 TRON - $0.1295
-Wrapped Bitcoin - $60649.39
-Avalanche - $21.65
+Wrapped Bitcoin - $60615.53
+Avalanche - $21.64
 Shiba Inu - $0.00001403
-Bitcoin Cash - $358.00
+Bitcoin Cash - $357.73
 Polkadot - $4.75
-Chainlink - $10.61
-UNUS SED LEO - $5.83
+Chainlink - $10.64
+UNUS SED LEO - $5.79
 Dai - $0.9999
-Litecoin - $61.14
-NEAR Protocol - $4.03
-Polygon - $0.4253
+Litecoin - $61.16
+NEAR Protocol - $4.02
+Polygon - $0.4258
 Kaspa - $0.166
-Uniswap - $6.19
-Pepe - $0.000008396
+Uniswap - $6.21
+Pepe - $0.000008384
 Internet Computer - $7.33
-Stellar - $0.1016
-Ethereum Classic - $19.41
-Aptos - $5.90
-Monero - $150.44
-Cronos - $0.0946
-Sui - $0.8945
+Stellar - $0.1015
+Ethereum Classic - $19.44
+Aptos - $5.93
+Monero - $150.38
+Cronos - $0.0942
+Sui - $0.9173
 Stacks - $1.48
-OKB - $36.23
-Filecoin - $3.74
-Artificial Superintelligence Alliance - $0.8449
-bittensor - $290.34
-Mantle - $0.621
-Cosmos - $5.14
-Hedera - $0.05567
-VeChain - $0.02363
-Render Token - $4.89
-First Digital USD - $0.9992
-Arbitrum - $0.5698
-Injective - $19.16
+OKB - $36.24
+Filecoin - $3.75
+Artificial Superintelligence Alliance - $0.8458
+bittensor - $289.86
+Mantle - $0.6208
+Cosmos - $5.15
+Hedera - $0.05563
+VeChain - $0.02364
+Render Token - $4.84
+First Digital USD - $0.9993
+Arbitrum - $0.5711
+Injective - $19.28
 Immutable X - $1.19
-Maker - $1990.16
-dogwifhat - $1.79
+Maker - $1992.23
+dogwifhat - $1.78
 Optimism - $1.41
 WhiteBIT Token - $10.25

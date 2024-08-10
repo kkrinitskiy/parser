@@ -1,30 +1,30 @@
-Bitcoin - $60681.40
-Ethereum - $2620.79
-Tether - $1.0001
-BNB - $515.00
-Solana - $153.93
-USD Coin - $0.99970
-Ripple - $0.59950
-Lido Staked Ether - $2619.22
-Toncoin - $6.6940
-Dogecoin - $0.10390
-Cardano - $0.34630
-Tron - $0.12957
-Wrapped Bitcoin - $60644.90
-Avalanche - $21.6520
-Shiba Inu - $0.000014039
-OKB - $36.2600
-Bitcoin Cash - $357.80
-Polkadot - $4.7580
+Bitcoin - $60598.00
+Ethereum - $2618.62
+Tether - $1.0003
+BNB - $514.30
+Solana - $153.51
+USD Coin - $0.99980
+Ripple - $0.59540
+Lido Staked Ether - $2615.56
+Toncoin - $6.6860
+Dogecoin - $0.10395
+Cardano - $0.34540
+Tron - $0.12947
+Wrapped Bitcoin - $60688.80
+Avalanche - $21.6240
+Shiba Inu - $0.000014021
+OKB - $36.2500
+Bitcoin Cash - $358.00
+Polkadot - $4.7510
 Chainlink - $10.6340
 UNUS SED LEO - $5.8060
-DAI - $0.99990
-Uniswap - $6.2030
-Litecoin - $61.2300
-Near Protocol - $4.0250
-Polygon - $0.42570
-Pepe - $0.0000084070
-Internet Computer - $7.3370
-Stellar - $0.10190
-Ethereum Classic - $19.4200
-Aptos - $5.9040
+DAI - $1.0000
+Uniswap - $6.2090
+Litecoin - $61.0900
+Near Protocol - $4.0190
+Polygon - $0.42590
+Pepe - $0.0000083730
+Internet Computer - $7.3180
+Stellar - $0.10135
+Ethereum Classic - $19.4100
+Aptos - $5.9330
