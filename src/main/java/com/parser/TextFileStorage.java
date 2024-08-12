@@ -1,6 +1,5 @@
 package com.parser;
 
-import com.parser.cryptoSiteParsers.CryptoSiteParser;
 import com.parser.dto.Cryptocurrency;
 
 import java.io.BufferedWriter;
@@ -10,6 +9,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
+
+/**
+ * Будущий репозиторий
+ */
 public class TextFileStorage {
 
     public void store(List<Cryptocurrency> cryptocurrencyList, String siteName){
